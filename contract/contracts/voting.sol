@@ -107,6 +107,26 @@ contract Voting {
     }
 
     /**
+     * @dev Self-register as a voter.
+     * This allows users to register themselves after off-chain verification.
+     */
+    function registerVoterBySelf() public {
+        require(
+            !voters[msg.sender].isRegistered,
+            "Error: You are already registered as a voter."
+        );
+        voters[msg.sender].isRegistered = true;
+        emit VoterRegistered(msg.sender);
+    }
+
+    /**
+     * @dev Check if a voter is registered.
+     */
+    function isVoterRegistered(address _voter) public view returns (bool) {
+        return voters[_voter].isRegistered;
+    }
+
+    /**
      * @dev Allows a registered voter to cast their vote.
      */
     function vote(uint _candidateId) public atState(ElectionState.Running) {
