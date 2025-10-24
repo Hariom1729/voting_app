@@ -6,7 +6,8 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors({ origin: process.env.CORS_ORIGIN?.split(",") || "*" }));
-app.use(express.json());
+app.use(express.json({ limit: "100mb" })); // Increase limit to handle base64 images
+app.use(express.urlencoded({ limit: "100mb", extended: true }));
 
 // Health check
 app.get("/health", (_req, res) => {

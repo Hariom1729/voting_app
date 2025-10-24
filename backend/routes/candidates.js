@@ -4,6 +4,17 @@ const Voter = require("../models/Voter");
 
 const router = express.Router();
 
+// Get all candidates
+router.get("/", async (req, res) => {
+  try {
+    const candidates = await Candidate.find({}).select("-aadhaar -walletAddress -__v");
+    return res.json(candidates);
+  } catch (err) {
+    console.error("GET /api/candidates error:", err);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 // Check if wallet is already registered (as voter or candidate)
 router.get("/check-wallet/:walletAddress", async (req, res) => {
   try {
@@ -81,7 +92,7 @@ router.get("/check-aadhaar/:aadhaar", async (req, res) => {
 // Create or upsert a candidate by aadhaar
 router.post("/", async (req, res) => {
   try {
-    const { name, party, aadhaar, walletAddress } = req.body || {};
+    const { name, party, slogan, partyIcon, aadhaar, walletAddress } = req.body || {};
     if (!name || !aadhaar || !walletAddress) {
       return res.status(400).json({ error: "name, aadhaar, and walletAddress are required" });
     }
@@ -99,7 +110,14 @@ router.post("/", async (req, res) => {
 
     const candidate = await Candidate.findOneAndUpdate(
       { aadhaar },
-      { name, party: party || "Independent", aadhaar, walletAddress },
+      { 
+        name, 
+        party: party || "Independent", 
+        slogan: slogan || "",
+        partyIcon: partyIcon || "",
+        aadhaar, 
+        walletAddress 
+      },
       { new: true, upsert: true, setDefaultsOnInsert: true }
     );
     return res.status(201).json(candidate);

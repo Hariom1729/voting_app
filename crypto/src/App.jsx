@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import './App.css'
 import Welcome from './components/Welcome.jsx'
 import VoterRegister from './components/VoterRegister.jsx'
@@ -11,8 +12,14 @@ import CandidateFace from './components/CandidateFace.jsx'
 import CandidateSuccess from './components/CandidateSuccess.jsx'
 import AdminLogin from './components/AdminLogin.jsx'
 import AdminDashboard from './components/AdminDashboard.jsx'
+import { loadCandidates, preserveSampleCandidates } from './state.js'
 
 export default function App() {
+  // Load candidates from backend on app startup
+  useEffect(() => {
+    preserveSampleCandidates() // Preserve sample candidates first
+    loadCandidates() // Then load from backend
+  }, [])
   return (
     <Routes>
       <Route path="/" element={<Welcome />} />

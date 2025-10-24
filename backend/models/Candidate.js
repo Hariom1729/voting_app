@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const candidateSchema = new mongoose.Schema({
   name: { type: String, required: true, trim: true },
   party: { type: String, default: "Independent" },
+  slogan: { type: String, default: "" },
+  partyIcon: { type: String, default: "" }, // URL or base64 string for party icon
   aadhaar: { type: String, required: true, unique: true, index: true },
   walletAddress: { type: String, required: true, unique: true, index: true },
   votes: { type: Number, default: 0 },

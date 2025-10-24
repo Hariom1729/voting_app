@@ -12,6 +12,8 @@ export default function CandidateAadhaar() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [aadhaarStatus, setAadhaarStatus] = useState(null)
   const [aadhaarValue, setAadhaarValue] = useState('')
+  const [partyIcon, setPartyIcon] = useState(null)
+  const [partyIconPreview, setPartyIconPreview] = useState('')
 
   const handleWalletConnect = (walletAddress) => {
     console.log('Wallet connected:', walletAddress)
@@ -26,6 +28,60 @@ export default function CandidateAadhaar() {
     setAadhaarStatus(status)
   }
 
+  const compressImage = (file, maxWidth = 200, quality = 0.8) => {
+    return new Promise((resolve) => {
+      const canvas = document.createElement('canvas')
+      const ctx = canvas.getContext('2d')
+      const img = new Image()
+      
+      img.onload = () => {
+        // Calculate new dimensions
+        let { width, height } = img
+        if (width > maxWidth) {
+          height = (height * maxWidth) / width
+          width = maxWidth
+        }
+        
+        canvas.width = width
+        canvas.height = height
+        
+        // Draw and compress
+        ctx.drawImage(img, 0, 0, width, height)
+        const compressedDataUrl = canvas.toDataURL('image/jpeg', quality)
+        resolve(compressedDataUrl)
+      }
+      
+      img.src = URL.createObjectURL(file)
+    })
+  }
+
+  const handlePartyIconChange = async (event) => {
+    const file = event.target.files[0]
+    if (file) {
+      // Check file size (limit to 2MB)
+      if (file.size > 2 * 1024 * 1024) {
+        alert('Image file is too large. Please select an image smaller than 2MB.')
+        return
+      }
+      
+      setPartyIcon(file)
+      
+      // Compress the image for preview and storage
+      try {
+        const compressedDataUrl = await compressImage(file)
+        setPartyIconPreview(compressedDataUrl)
+      } catch (error) {
+        console.error('Error compressing image:', error)
+        // Fallback to original file
+        const reader = new FileReader()
+        reader.onload = (e) => {
+          setPartyIconPreview(e.target.result)
+        }
+        reader.readAsDataURL(file)
+      }
+    }
+  }
+
   async function handleSubmit(e) {
     e.preventDefault()
     
@@ -38,6 +94,10 @@ export default function CandidateAadhaar() {
     const aadhaar = aadhaarValue
     const name = form.get('name')?.toString().trim() || ''
     const party = form.get('party')?.toString().trim() || ''
+    const slogan = form.get('slogan')?.toString().trim() || ''
+    
+    // Use the compressed image (already in base64 format)
+    let partyIconBase64 = partyIconPreview || ''
     
     if (aadhaarStatus && aadhaarStatus.isRegistered) {
       alert('This Aadhaar number is already registered. Please use a different Aadhaar number.')
@@ -52,8 +112,8 @@ export default function CandidateAadhaar() {
     setIsSubmitting(true)
     
     try {
-      await createCandidate({ name, party, aadhaar, walletAddress: account })
-      appState.candidate.profile = { aadhaar, name, party, walletAddress: account }
+      await createCandidate({ name, party, slogan, partyIcon: partyIconBase64, aadhaar, walletAddress: account })
+      appState.candidate.profile = { aadhaar, name, party, slogan, partyIcon: partyIconBase64, walletAddress: account }
       appState.candidate.aadhaarEntered = true
       navigate('/candidate/otp')
     } catch (e) {
@@ -131,6 +191,26 @@ export default function CandidateAadhaar() {
                 <div>
                     <label className="block text-sm font-medium mb-1 text-gray-300" htmlFor="party">Party</label>
                     <input id="party" name="party" type="text" placeholder="Independent if none" className={inputStyles} />
+                </div>
+                <div>
+                    <label className="block text-sm font-medium mb-1 text-gray-300" htmlFor="slogan">Campaign Slogan</label>
+                    <input id="slogan" name="slogan" type="text" placeholder="Enter your campaign slogan" className={inputStyles} />
+                </div>
+                <div>
+                    <label className="block text-sm font-medium mb-1 text-gray-300" htmlFor="partyIcon">Party Icon</label>
+                    <input 
+                        id="partyIcon" 
+                        name="partyIcon" 
+                        type="file" 
+                        accept="image/*"
+                        onChange={handlePartyIconChange}
+                        className="w-full bg-gray-800/50 border border-gray-600 rounded px-3 py-2 text-gray-200 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 file:mr-4 file:py-1 file:px-3 file:rounded file:border-0 file:text-sm file:font-medium file:bg-cyan-500/20 file:text-cyan-300 hover:file:bg-cyan-500/40" 
+                    />
+                    {partyIconPreview && (
+                        <div className="mt-2">
+                            <img src={partyIconPreview} alt="Party icon preview" className="w-16 h-16 object-cover rounded border border-gray-600" />
+                        </div>
+                    )}
                 </div>
                 <div>
                     <label className="block text-sm font-medium mb-1 text-gray-300" htmlFor="aadhar">Aadhaar Number</label>
