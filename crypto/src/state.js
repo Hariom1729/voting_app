@@ -36,31 +36,31 @@ export const appState = {
       slogan: 'One Nation, One Future', 
       partyIcon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiM4MmNhOWQiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMjQgMjRIMzJWMzJIMjRWMjRaIi8+CjxwYXRoIGQ9Ik0yOCAyOEgzMlYzMkgyOFYyOFoiLz4KPC9zdmc+Cjwvc3ZnPgo=', 
       votes: 0 
-    }
-    // { 
-    //   id: 'cand3', 
-    //   name: 'Elena Rodriguez', 
-    //   party: 'Green Future', 
-    //   slogan: 'Sustainable Progress for All', 
-    //   partyIcon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiNmZmM2NTgiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMjQgMjRIMzJWMzJIMjRWMjRaIi8+CjxwYXRoIGQ9Ik0yOCAyOEgzMlYzMkgyOFYyOFoiLz4KPC9zdmc+Cjwvc3ZnPgo=', 
-    //   votes: 0 
-    // },
-    // { 
-    //   id: 'cand4', 
-    //   name: 'James Wilson', 
-    //   party: 'Conservative Coalition', 
-    //   slogan: 'Traditional Values, Modern Solutions', 
-    //   partyIcon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiNmZjg0NDIiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMjQgMjRIMzJWMzJIMjRWMjRaIi8+CjxwYXRoIGQ9Ik0yOCAyOEgzMlYzMkgyOFYyOFoiLz4KPC9zdmc+Cjwvc3ZnPgo=', 
-    //   votes: 0 
-    // },
-    // { 
-    //   id: 'cand5', 
-    //   name: 'Aisha Patel', 
-    //   party: 'Innovation Party', 
-    //   slogan: 'Technology for Everyone', 
-    //   partyIcon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiMwMGM0OWYiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMjQgMjRIMzJWMzJIMjRWMjRaIi8+CjxwYXRoIGQ9Ik0yOCAyOEgzMlYzMkgyOFYyOFoiLz4KPC9zdmc+Cjwvc3ZnPgo=', 
-    //   votes: 0 
-    // },
+    },
+    { 
+      id: 'cand3', 
+      name: 'Elena Rodriguez', 
+      party: 'Green Future', 
+      slogan: 'Sustainable Progress for All', 
+      partyIcon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiNmZmM2NTgiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMjQgMjRIMzJWMzJIMjRWMjRaIi8+CjxwYXRoIGQ9Ik0yOCAyOEgzMlYzMkgyOFYyOFoiLz4KPC9zdmc+Cjwvc3ZnPgo=', 
+      votes: 0 
+    },
+    { 
+      id: 'cand4', 
+      name: 'James Wilson', 
+      party: 'Conservative Coalition', 
+      slogan: 'Traditional Values, Modern Solutions', 
+      partyIcon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiNmZjg0NDIiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMjQgMjRIMzJWMzJIMjRWMjRaIi8+CjxwYXRoIGQ9Ik0yOCAyOEgzMlYzMkgyOFYyOFoiLz4KPC9zdmc+Cjwvc3ZnPgo=', 
+      votes: 0 
+    },
+    { 
+      id: 'cand5', 
+      name: 'Aisha Patel', 
+      party: 'Innovation Party', 
+      slogan: 'Technology for Everyone', 
+      partyIcon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiMwMGM0OWYiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMjQgMjRIMzJWMzJIMjRWMjRaIi8+CjxwYXRoIGQ9Ik0yOCAyOEgzMlYzMkgyOFYyOFoiLz4KPC9zdmc+Cjwvc3ZnPgo=', 
+      votes: 0 
+    },
   ],
   voters: [], // { name, aadhaar, hasVoted }
 }
@@ -106,10 +106,16 @@ export async function loadCandidates() {
       )
       
       if (!existingCandidate) {
-        // Add new candidate from backend
+        // --- THIS BLOCK IS UPDATED ---
+        
+        // 1. Get the ID first so we can use it in the fallback name
+        const id = c._id || `cand${Date.now()}`;
+        
+        // 2. Add new candidate from backend
         const newCandidate = {
-          id: c._id || `cand${Date.now()}`, // Use timestamp for unique ID
-          name: c.name,
+          id: id,
+          // 3. (THE FIX) Provide a fallback name if c.name is missing
+          name: c.name || `Candidate ${id.substring(0, 8)}`,
           party: c.party || 'Independent',
           slogan: c.slogan || '',
           partyIcon: c.partyIcon || '',
