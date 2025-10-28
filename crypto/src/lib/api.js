@@ -1,4 +1,6 @@
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000'
+const API_BASE = (typeof window !== 'undefined' && window?.location?.hostname === 'localhost')
+  ? 'http://localhost:4000'
+  : 'https://voting-app-uytn.onrender.com';
 
 export async function createVoter(payload) {
   const res = await fetch(`${API_BASE}/api/voters`, {
