@@ -70,6 +70,41 @@
       "artifacts": [
         "Voting"
       ]
+    },
+    "/Users/mac2/Desktop/project/eyantra/voting_app/contract/contracts/voting.sol": {
+      "lastModificationDate": 1761632446458,
+      "contentHash": "f8d35ed6a5d017aae2c986b0534158c5",
+      "sourceName": "contracts/voting.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "Voting"
+      ]
     }
   }
 }
