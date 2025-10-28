@@ -61,11 +61,10 @@ const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
 
 // --- Basic App Setup ---
 const app = express();
+
+const allowedOrigins = process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(",") : "*";
 app.use(cors({
-  origin: [
-    "http://localhost:5173", // for local dev
-    "https://votingappp-8psa00lqs-hariom1729s-projects.vercel.app/" // replace with your real Vercel domain
-  ],
+  origin: allowedOrigins,
   credentials: true
 }));
 
