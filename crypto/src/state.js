@@ -23,42 +23,42 @@ export const appState = {
   candidates: [
     { 
       id: 'cand1', 
-      name: 'Dr. Sarah Johnson', 
-      party: 'Progressive Alliance', 
-      slogan: 'Building Tomorrow Together', 
-      partyIcon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiM4ODg0ZDgiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMjQgMjRIMzJWMzJIMjRWMjRaIi8+CjxwYXRoIGQ9Ik0yOCAyOEgzMlYzMkgyOFYyOFoiLz4KPC9zdmc+Cjwvc3ZnPgo=', 
+      name: 'Rahul Gandhi', 
+      party: 'Indian National Congress', 
+      slogan: 'Judega Bharat, Jeetega India', 
+      partyIcon: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Indian_National_Congress_hand_logo.png',
       votes: 0 
     },
     { 
       id: 'cand2', 
-      name: 'Michael Chen', 
-      party: 'Unity Party', 
-      slogan: 'One Nation, One Future', 
-      partyIcon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiM4MmNhOWQiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMjQgMjRIMzJWMzJIMjRWMjRaIi8+CjxwYXRoIGQ9Ik0yOCAyOEgzMlYzMkgyOFYyOFoiLz4KPC9zdmc+Cjwvc3ZnPgo=', 
+      name: 'Akhilesh Yadav', 
+      party: 'Samajwadi Party', 
+      slogan: 'Judenge toh jeetenge', 
+      partyIcon: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Samajwadi_Party.png', 
       votes: 0 
     },
     { 
       id: 'cand3', 
-      name: 'Elena Rodriguez', 
-      party: 'Green Future', 
-      slogan: 'Sustainable Progress for All', 
-      partyIcon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiNmZmM2NTgiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMjQgMjRIMzJWMzJIMjRWMjRaIi8+CjxwYXRoIGQ9Ik0yOCAyOEgzMlYzMkgyOFYyOFoiLz4KPC9zdmc+Cjwvc3ZnPgo=', 
+      name: 'Narendra Modi', 
+      party: 'Bharatiya Janata Party', 
+      slogan: 'Modi hai toh Mumkin hai ', 
+      partyIcon: 'https://c8.alamy.com/comp/2TCXP21/lotus-flower-symbol-political-party-sign-bjp-banner-background-election-symbol-bhartiya-janata-party-2TCXP21.jpg', 
       votes: 0 
     },
     { 
       id: 'cand4', 
-      name: 'James Wilson', 
-      party: 'Conservative Coalition', 
-      slogan: 'Traditional Values, Modern Solutions', 
-      partyIcon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiNmZjg0NDIiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMjQgMjRIMzJWMzJIMjRWMjRaIi8+CjxwYXRoIGQ9Ik0yOCAyOEgzMlYzMkgyOFYyOFoiLz4KPC9zdmc+Cjwvc3ZnPgo=', 
+      name: 'Arvind Kejriwal', 
+      party: 'Aam Aadmi Party' , 
+      slogan: 'Jhaadu chalaao, beimaan bhagaao', 
+      partyIcon: 'https://i.ndtvimg.com/i/2015-04/aap-logo-650_650x400_41428497829.jpg', 
       votes: 0 
     },
     { 
       id: 'cand5', 
-      name: 'Aisha Patel', 
-      party: 'Innovation Party', 
-      slogan: 'Technology for Everyone', 
-      partyIcon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiMwMGM0OWYiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMjQgMjRIMzJWMzJIMjRWMjRaIi8+CjxwYXRoIGQ9Ik0yOCAyOEgzMlYzMkgyOFYyOFoiLz4KPC9zdmc+Cjwvc3ZnPgo=', 
+      name: 'Siddaramaiah', 
+      party: 'Indian National Congress', 
+      slogan: 'udega Bharat, Jeetega India', 
+      partyIcon: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Indian_National_Congress_hand_logo.png', 
       votes: 0 
     },
   ],
